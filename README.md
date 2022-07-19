@@ -7,14 +7,11 @@ Installation:
 1. Add **yarn install** hook to root composer.json. This will install mjml into the package folder after package is installed.
 ```json
 {
-  ...
   "scripts": {
     "post-install-cmd": [
-        ...
-        "\\Schedulr\\SimpleMjml\\YarnInstall::run" <-- ADD THIS LINE
+        "\\Schedulr\\SimpleMjml\\YarnInstall::run"
       ]
   },
-  ...
 }
 ```
 2. Install package with `composer require kilianmaier/mjml-converter:dev-master`
