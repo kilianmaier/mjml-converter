@@ -1,5 +1,5 @@
 {
-    "name": "schedulr/simple-mjml",
+    "name": "kilianmaier/mjml-converter",
     "description": "Very simple wrapper around `mjml js tool` easy converting from PHP",
     "autoload": {
         "psr-4": {
