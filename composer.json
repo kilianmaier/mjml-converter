@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": ">=7.4",
-        "symfony/process": "^5.4"
+        "symfony/process": "^5"
     },
     "scripts": {
         "post-package-install": "yarn",
