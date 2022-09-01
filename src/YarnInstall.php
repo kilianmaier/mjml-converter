@@ -6,7 +6,7 @@ use Symfony\Component\Process\Process;
 
 class YarnInstall
 {
-	public function run()
+	public static function run()
 	{
         (new Process(['yarn'], __DIR__ . '/..'))->mustRun();
 	}
