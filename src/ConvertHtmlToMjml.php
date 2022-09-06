@@ -20,13 +20,18 @@ class ConvertHtmlToMjml
 
     public function __invoke(string $html, string $styles = ""): string
     {
+        return $this->convert($this->wrapWithMjmlTags($html, $styles));
+    }
+
+    public function convert(string $html): string
+    {
         $process = new Process([
             $this->mjmlBinPath, // most probably = ./node_modules/.bin/mjml
             '-i', // read data from stdin
             '-s', // output result to stdout
         ]);
 
-        $process->setInput($this->wrapWithMjmlTags($html, $styles));
+        $process->setInput($html);
         $process->mustRun();
 
         return $process->getOutput();
